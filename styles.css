@@ -1,0 +1,153 @@
+body{
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 17px;
+ line-height: 1.6;
+}
+
+.modalBtn{
+ background-color: plum;
+ padding: 1em 2em;
+ border-radius: 10px;
+ color: #fff;
+ outline: none;
+}
+.modalBtn:hover{
+ background-color: #1A1832;
+ cursor: pointer;
+}
+
+#modal{
+ /* display: none; */
+ position: fixed;
+ z-index: 1;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ background-color: rgba(215, 200, 245, 0.5);
+ overflow: auto;
+}
+
+#modal-content{
+ background-color: #1A1832;
+ margin: 20% auto;
+ width: 70%;
+ border-radius: 10px;
+ box-shadow: 0 0.5px 3px 0 #1A1832, 0 7px 5px 0 #1A1832 ;
+ animation-name: modalTrans;
+ color: #f9f9fA;
+}
+
+#modal-header, #modal-footer{
+ padding: 15px;
+ text-align: center;
+}
+
+#modal-header > p{
+ margin: 0 0 10px 0;
+}
+
+#modalEnd{
+ float: right;
+ color: rgba(255, 255, 255, 0.5);
+ font-weight: 100;
+ font-size: 1.8rem;
+}
+
+#modalEnd:hover{
+  color: plum;
+  cursor: pointer;
+}
+#modal-header > p{
+ margin-top: 40px;
+}
+
+#modal-body{
+ display: flex;
+ flex-direction: column;
+ justify-self: center;
+ align-items: center;
+ margin-left: 45px;
+ background-color: #282547;
+ width: 80%;
+ border-radius: 7px;
+}
+
+#modal-body > .stars{
+ display: flex;
+ justify-content: space-evenly;
+ width: 100%;
+}
+
+#modal-body > .stars > .transperant{
+ color: goldenrod;
+ text-decoration: none;
+ font-size: 2rem;
+}
+
+#modal-body > .stars > .transperant::before{
+ content: '\2606';
+ cursor: pointer;
+}
+
+
+#modal-body > .stars > .transperant:hover::before{
+ content: '\2605';
+ 
+}
+#modal-body > .stars > .current::before{
+ content: '\2605';
+ 
+}
+
+#modal-body > .stars > .current ~ {
+ color: goldenrod
+ 
+}
+
+
+#modal-body > #rating-text{
+ display: flex;
+ justify-content: space-between;
+ color: rgba(249, 249, 250, 0.5);
+ margin: 15px;
+ width: 70%;
+ 
+}
+
+#modal-footer{
+ display: flex;
+ flex-direction: column;
+ 
+}
+
+#modal-footer > #home-btn{
+ margin: 20px 145px;
+ width: 150px;
+ padding: 1em 2em;
+ background-color: #6317AE;
+ border-radius: 5px;
+ border: none;
+ color: #f9f9fA;
+}
+
+#modal-footer > #home-btn:hover{
+ background-color: crimson;
+ cursor: pointer;
+}
+
+#modal-footer > #textBtn{
+text-decoration: none;
+margin-bottom: 10px;
+color: rgba(249, 249, 250, 0.5);
+}
+#modal-footer > #textBtn:hover{
+ color: plum;
+ cursor: pointer;
+}
+
+
+@keyframes modalTrans{
+ from{opacity: 0;}
+ to{opacity: 1;}
+}

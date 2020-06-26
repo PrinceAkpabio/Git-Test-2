@@ -1,10 +1,41 @@
 <html lang="en">
+
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Git Test 2</title>
+ <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.css">
+ <link rel="stylesheet" href="styles.css">
+ <title>Ending Meeting modal</title>
 </head>
+
 <body>
- 
+ <button class="modalBtn">End Meeting</button>
+
+ <div class="simpleModal" id="modal">
+  <div id="modal-content">
+   <div id="modal-header">
+    <span id="modalEnd">&times;</span>
+    <p>You left the meeting</p>
+   </div>
+   <div id="modal-body">
+    <p>How was the quality of the call?</p>
+    <span class="stars" data-rating="1"><a href="#" class="transperant">&nbsp;</a>
+     <a href="#" class="transperant">&nbsp;</a>
+     <a href="#" class="transperant">&nbsp;</a>
+     <a href="#" class="transperant">&nbsp;</a>
+     <a href="#" class="transperant">&nbsp;</a></span>
+
+    <span id="rating-text"><small>very bad</small>
+     <small>Excellent</small></span>
+   </div>
+
+   <div id="modal-footer"><button id="home-btn">Return Home</button>
+    <a href="#" id="textBtn"><small>Join Again</small></a></div>
+
+  </div>
+ </div>
+
+ <script src="main.js"></script>
 </body>
+
 </html>
